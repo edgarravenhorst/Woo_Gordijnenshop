@@ -1,0 +1,32 @@
+
+// Variables
+@import "variables";
+
+// Font Awesome
+$fa-font-path: "/wp-content/themes/#{$themename}/assets/fonts/";
+@import "~font-awesome/scss/font-awesome";
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "menu_config";
+@import "wordpress";
+@import "buttons";
+@import "forms";
+@import "setup";
+
+// Mixins
+// @import "mixins/...";
+
+// Partials
+@import "partials/header-navigation";
+@import "partials/footer-main";
+@import "partials/products";
+
+// Pages
+@import "pages/404";
+@import "pages/admin-bar";
+@import "pages/archive";
+@import "pages/homepage";
+@import "pages/search";
+@import "pages/single";
+@import "pages/page";

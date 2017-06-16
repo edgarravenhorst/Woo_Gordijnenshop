@@ -1,0 +1,90 @@
+@mixin set-theme($themecolor){
+  header#navigation{
+    a.btn{
+      background-color: $themecolor;
+      border-color: $themecolor;
+      &:hover{
+        background-color: darken($themecolor, 10%);
+        border-color: darken($themecolor, 10%);
+      }
+    }
+  }
+  section.plan.inverted{
+    h2{
+      color: $themecolor;
+    }
+  }
+  form.searchform.group{
+    .btn-icon{
+      background-color: $themecolor;
+      border-color: $themecolor;
+      &:hover{
+        background-color: darken($themecolor, 10%);
+        border-color: darken($themecolor, 10%);
+      }
+    }
+  }
+section.meetus{
+  i{
+    color: $themecolor;
+  }
+}
+
+  h1, h2, h3, h5, h6{
+    color: $themecolor;
+  }
+  section.cta{
+    h2{
+      color: $themecolor;
+    }
+  }
+  section.quote{
+    h1{
+      color: $themecolor;
+    }
+  }
+  header.featuredimage{
+    article .content{
+      a.btn.btn-brand-3{
+        background: $themecolor;
+        border-color: $themecolor;
+      }
+    }
+  }
+} // end mixin
+
+body.stijl-1{
+  @include set-theme($color1);
+  .polaroidslider.ages:not(.inverted){
+    section.slideshow{
+      background-image:url('#{$imgbase}/bg-green.png') !important;
+    }
+  }
+  section.plan:not(.inverted){
+      background-image:url('#{$imgbase}/bg-green2.png') !important;
+  }
+}
+
+body.stijl-2{
+  @include set-theme($color2);
+}
+
+body.stijl-3{
+  @include set-theme($color3);
+}
+
+body.stijl-4{
+  @include set-theme($color4);
+  .polaroidslider.ages:not(.inverted){
+    section.slideshow{
+      background-image:url('#{$imgbase}/bg-blue.png') !important;
+    }
+  }
+  section.plan:not(.inverted){
+      background-image:url('#{$imgbase}/bg-blue2.png') !important;
+  }
+}
+
+body.stijl-5{
+  @include set-theme($color5);
+}

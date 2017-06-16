@@ -1,0 +1,22 @@
+// Alleen voor adminbar fixes
+body.admin-bar {
+  padding-top: 32px;
+  header#navigation{
+    top:32px;
+  }
+
+  @include media-breakpoint-down(sm){
+    #main-menu {
+      top: 46px !important;
+    }
+    padding-top: 46px;
+
+    #wpadminbar{
+      position: fixed;
+      top:0;
+    }
+    header#navigation{
+      top:46px;
+    }
+  }
+}

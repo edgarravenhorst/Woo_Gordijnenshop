@@ -1,0 +1,35 @@
+$registered-menus: (
+    main-menu: (
+        selector:"#main-menu",
+        themes:(
+            aside-left: (
+                min:0px,
+                max:map-get($grid-breakpoints, md),
+                autohide: map-get($grid-breakpoints, md)
+            ),
+            plain-horizontal: (min:map-get($grid-breakpoints, md))
+        )
+    )
+    //, another menu
+    //, another menu
+);
+
+@import "node_modules/advanced-menus/scss/menu";
+@include generate-menus();
+
+@media screen and (min-width: 768px){
+  header#navigation #main-menu .menu ul ul.sub-menu {
+      left:100%;
+      margin-left: 0;
+  }
+
+  #main-menu li:hover > ul {
+    visibility: visible;
+    transform: scaleY(1);
+  }
+
+  #main-menu li ul li:hover ul:not(.active) li {
+    max-height: 42px !important;
+  }
+
+}

@@ -1,0 +1,15 @@
+@for $i from 1 through length($brand-colors) {
+  .color-#{$i} {
+    color: nth($brand-colors, $i);
+  }
+  .bg-#{$i} {
+    background-color: nth($brand-colors, $i);
+  }
+}
+.color-fb{
+  color: #1ba6df;
+}
+
+.bg-fb{
+  background: #1ba6df;
+}
