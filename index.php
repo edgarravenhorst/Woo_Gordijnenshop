@@ -1,33 +1,17 @@
-<?php get_header(); ?>
-<main class="page-content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <header class="titlebar">
-          <h1>Nieuws</h1>
-        </header>
-      </div>
-    </div>
-    <div class="row">
-      <article id="page_content">
-        <?php
-        while ( have_posts() ) : the_post();
-        get_template_part('partials/content', 'listitem');
-      endwhile;
-      ?>
-    </article>
-  </div>
-  <section class="post-pagination">
-    <div class="col-12">
-      <?php $args = array(
-        'prev_next'          => true,
-        'prev_text'          => __('<span class="prev"></span>'),
-        'next_text'          => __('<span class="next"></span>'),
-        'type'               => 'plain',
-      );
-      echo paginate_links($args); ?>
-    </div>
-  </section>
-</div>
-</main>
-<?php get_footer(); ?>
+<?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
+
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
+
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
