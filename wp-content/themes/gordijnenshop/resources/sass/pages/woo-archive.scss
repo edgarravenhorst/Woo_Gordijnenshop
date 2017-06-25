@@ -1,0 +1,31 @@
+body.archive.woocommerce{
+  #content{
+    display: flex;
+    flex-wrap: wrap;
+
+    form{
+      margin-left: auto;
+    }
+  }
+  .products{
+    margin-top: 15px;
+    flex: 0 0 100%;
+    li{
+      width:48%;
+      margin:0 2% 1% 0;
+      &.last{margin-right: 0}
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    .products{
+      margin-top: 15px;
+      flex: 0 0 100%;
+      li{
+        width:23%;
+        margin:0 2.66% 1% 0;
+        &.last{margin-right: 0}
+      }
+    }
+  };
+}

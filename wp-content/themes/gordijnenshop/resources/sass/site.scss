@@ -1,0 +1,31 @@
+
+// Variables
+@import "variables";
+@import "node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+@import "menu_config";
+@import "wordpress";
+@import "buttons";
+@import "forms";
+@import "setup";
+
+// Mixins
+// @import "mixins/...";
+
+// Partials
+@import "partials/header-navigation";
+@import "partials/footer-main";
+@import "partials/products";
+@import "partials/sidebar";
+
+// Pages
+@import "pages/404";
+@import "pages/admin-bar";
+@import "pages/archive";
+@import "pages/homepage";
+@import "pages/search";
+@import "pages/single";
+@import "pages/woo-single-product";
+@import "pages/woo-archive"; 
+
+@import "pages/page";

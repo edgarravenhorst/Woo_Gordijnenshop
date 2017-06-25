@@ -1,0 +1,39 @@
+body.single-product{
+  .woocommerce-product-gallery {
+    width:100% !important;
+    float:none !important;
+  }
+
+  #main-description{
+    .price{
+      margin: 3px 20px 0 0;
+      float:left;
+    }
+  }
+
+  .related.products{
+    h2{
+      background: #fff;
+      padding:1em 0;
+      border-bottom: 2px solid #555;
+      margin:0;
+    }
+    .products{
+      padding:35px 0;
+    }
+  }
+
+  div.images .woocommerce-product-gallery__image:nth-child(n+2){
+    margin: 2.5% 2.5% 0 0;
+    width:22.5% !important;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    #main-description{
+      flex-direction: column-reverse;
+    }
+  }
+}

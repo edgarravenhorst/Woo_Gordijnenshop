@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600|Raleway:300,300i,400,400i,600,700');
+
+$themename: "webpack-core";
+$headerheight: 120px;
+
+$font1: 'Muli', sans-serif;
+$font2: 'Raleway', sans-serif;
+$font3: $font1;
+$font4: $font1;
+
+// Body
+$body-bg: #fff;
+$body-color: #28292f;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+$color1: #DA278A;
+$color2: #2D2C31;
+$color3: #b72f17;
+$color4: #ef4d8b;
+$color5: #fff;
+
+// $brand-colors: $color1, $color2, $color3, $color4, $color5;
+
+// Brands
+$brand-primary: $color5;
+$brand-info: #1e4da1;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger:  #bf5329;
+
+// Typography
+$font-family-sans-serif: $font1;
+$line-height-base: 1.5;
+$base-line-height : $line-height-base;
+$text-color: #4a4a4a;
+$base-font-weight: 400;
+
+// Links
+$link-color:            $body-color;
+$link-decoration:       none;
+$link-hover-color:      darken($link-color, 10%) !default;
+$link-hover-decoration: underline !default;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+// $btn-default-color: $text-color;
+$btn-padding-x: 1rem;
+$btn-padding-y: 0.6rem;
+$btn-border-radius: 6px;
+$btn-font-weight: 700;
+
+$btn-padding-y-lg: 0px;
+$btn-padding-x-lg: 40px;
+$btn-border-radius-lg: 6px;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: $text-color;
+$input-btn-border-width: 1px;
+
+$tablet-width: 900px;
+$max-page-width: '';
+
+$container-max-widths: (
+sm: 540px,
+md: 720px,
+lg: 920px,
+xl: 1100px
+);
+
+$font-size-base: 0.875rem; // Assumes the browser default, typically `16px` 0.1 == 2px
+// $base-font-size: $font-size-base;
+$font-size-lg: $font-size-base;
+$font-size-sm: $font-size-base;
+$font-size-xs: $font-size-base;
+$paragraph-margin-bottom: 1.5em;
+
+
+// Headings
+$color-h1: $color2;
+$color-h2: $color2;
+$color-h3: $color1;
+$color-h4: $color1;
+$color-h5: $color1;
+$color-h6: $color1;
+
+$font-size-h1: 3.5rem; // Op maat gemaakt..
+$font-size-h2: 1.35em; // Why we love -> "Wordpress"
+$font-size-h3: 1.35em;
+$font-size-h4: 1.5rem; // Why we love
+$font-size-h5: 1.25rem; // same as 4
+$font-size-h6: 1rem; // same as 4
+
+$container-fluid-max-width: map-get($container-max-widths, xl);
+.container-fluid{
+  width: 100%;
+  max-width: $container-fluid-max-width;
+}
+
+$imgbase: "/wp-content/themes/#{$themename}/assets/images/";

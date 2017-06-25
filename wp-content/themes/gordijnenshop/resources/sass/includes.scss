@@ -1,0 +1,8 @@
+@import "variables";
+
+// Font Awesome
+ $fa-font-path: "/wp-content/themes/#{$themename}/assets/fonts/";
+ @import "~font-awesome/scss/font-awesome";
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";

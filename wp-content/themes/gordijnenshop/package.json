@@ -1,11 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-  },
+      "dev": "npm run development",
+      "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "watch-poll": "npm run watch -- --watch-poll",
+      "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "prod": "npm run production",
+      "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
   "browserslist": [
     "> 1%",
     "last 4 versions"
@@ -15,20 +18,17 @@
   },
   "dependencies": {
     "font-awesome": "4.7.0",
-    "advanced-menus": "^1.0.7",
+    "advanced-menus": "^1.0.8",
     "bootstrap": "^4.0.0-alpha.6"
   },
   "devDependencies": {
     "axios": "^0.15.2",
-    "browser-sync": "^2.18.8",
-    "browser-sync-webpack-plugin": "^1.1.4",
-    "jquery": "^3.1.0",
-    "laravel-elixir-browsersync": "^0.1.5",
-    "laravel-mix": "^0.6.0",
-    "lodash": "^4.16.2",
+    "cross-env": "^3.2.3",
+    "jquery": "^3.1.1",
+    "laravel-mix": "0.11.4",
+    "lodash": "^4.17.4",
+    "purifycss-webpack": "^0.7.0",
     "tether": "^1.4.0",
-    "vue": "^2.0.1",
-    "webpack-dev-server": "^2.4.1",
-    "webpack-livereload-plugin": "^0.10.0"
+    "vue": "^2.1.10"
   }
 }

@@ -1,0 +1,17 @@
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "setup.scss";
+
+body, body.wp-autoresize{
+
+}
+
+@include media-breakpoint-up(md){
+  body, body.wp-autoresize{
+    
+  }
+}

@@ -65,12 +65,15 @@ function core_styles()
   * Minified and Concatenated styles
   *
   */
+
   wp_register_style('wp_style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
   wp_enqueue_style('wp_style'); // Enqueue it!
 
+	wp_register_style('theme_includes', get_template_directory_uri() . '/assets/css/includes.css', array(), '1.0', 'all');
+	wp_enqueue_style('theme_includes');
+
   wp_register_style('core_style', get_template_directory_uri() . '/assets/css/site.css', array(), '1.0', 'all');
   wp_enqueue_style('core_style'); // Enqueue it!
-
 
   /**
   *

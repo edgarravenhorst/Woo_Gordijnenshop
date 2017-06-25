@@ -1,0 +1,45 @@
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+img, figure{
+  max-width: 100%;
+}
+
+h1{font-family: $font2; font-weight: 300; color: $color-h1;}
+h2{font-family: $font2; font-weight: 300; color: $color2;}
+h3{font-family: $font2; font-weight: 300; color: $color-h3;}
+h4{color: $color-h4;}
+h5{color: $color-h5;}
+h6{color: $color-h6;}
+
+p,ul,ol{
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+.titlebar{
+  background: #eee;
+  font-size:2vw;
+  color:#aaa !important;
+  padding: 35px 0;
+  a{color:#aaa !important;}
+  h1{font-size:3em; font-weight: 400; color:#aaa;}
+
+  *{color:#333;}
+  *:last-child{
+    margin-bottom: 0;
+  }
+  *:first-child{
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-up(sm){
+    font-size:1em;
+  }
+}
+
+#page_content {
+  padding:35px 0;
+}

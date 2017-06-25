@@ -24,9 +24,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+<header class="titlebar">
+  <div class="container-fluid">
+
+    <?php
+    /**
+    * woocommerce_archive_description hook.
+    *
+    * @hooked woocommerce_taxonomy_archive_description - 10
+    * @hooked woocommerce_product_archive_description - 10
+    */
+    woocommerce_template_single_title();
+    woocommerce_breadcrumb();
+
+    ?>
+  </div>
+</header>
+
+<main id="page_content">
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
       <?php
       /**
       * woocommerce_before_main_content hook.
@@ -34,6 +52,7 @@ get_header( 'shop' ); ?>
       * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
       * @hooked woocommerce_breadcrumb - 20
       */
+      remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
       do_action( 'woocommerce_before_main_content' );
       ?>
 
@@ -52,19 +71,11 @@ get_header( 'shop' ); ?>
       do_action( 'woocommerce_after_main_content' );
       ?>
     </div>
-    <div class="col-md-3">
-      <?php
-      /**
-      * woocommerce_sidebar hook.
-      *
-      * @hooked woocommerce_get_sidebar - 10
-      */
-      do_action( 'woocommerce_sidebar' );
-      ?>
 
-    </div>
   </div>
 </div>
+
+</main>
 <?php get_footer( 'shop' );
 
 

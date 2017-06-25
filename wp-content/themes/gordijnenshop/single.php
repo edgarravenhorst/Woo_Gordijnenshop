@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <header class="titlebar">
   <div class="container-fluid">
-  <?php the_title() ?>
+  <h1><?php the_title() ?></h1>
   </div>
 </header>
 <main class="page-content">

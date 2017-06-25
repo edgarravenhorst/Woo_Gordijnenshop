@@ -1,5 +1,7 @@
 {
-  "assets/js/site.js": "assets/js/site.js",
-  "assets/css/site.css": "assets/css/site.css",
-  "assets/css/wp-editor-style.css": "assets/css/wp-editor-style.css"
+  "/assets/js/site.js": "/assets/js/site.js",
+  "/mix.js": "/mix.js",
+  "/assets/css/site.css": "/assets/css/site.css",
+  "/assets/css/wp-editor-style.css": "/assets/css/wp-editor-style.css",
+  "/assets/css/includes.css": "/assets/css/includes.css"
 }

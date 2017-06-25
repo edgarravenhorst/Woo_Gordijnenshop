@@ -1,0 +1,12 @@
+// form styling
+
+form{
+  input, select, textarea {
+    -webkit-appearance:none;
+    padding:5px 10px ;
+    background: #fff;
+    border:1px solid #ddd;
+    border-radius: 2px;
+
+  }
+}
