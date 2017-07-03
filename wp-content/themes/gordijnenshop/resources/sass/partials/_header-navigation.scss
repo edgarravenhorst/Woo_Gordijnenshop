@@ -1,15 +1,25 @@
 body.user-scrolled{
   header#navigation {
     height:75px;
-    padding:20px;
+    padding-top:20px;
+    padding-bottom:20px;
     .logo img{
       height: 100%;
+    }
+
+    @include menu-breakpoint("main-menu", "aside-left"){
+      height:$headerheight/2;
+      padding-top:10px;
+      padding-bottom:10px;
     }
   }
 }
 
 body{
   margin-top: $headerheight;
+  @include menu-breakpoint("main-menu", "aside-left"){
+    margin-top: $headerheight/2;
+  }
 }
 
 header#navigation {
@@ -85,6 +95,10 @@ header#navigation {
   }
 
   @include menu-breakpoint("main-menu", "aside-left"){
+    padding-top:10px;
+    padding-bottom: 10px;
+    height: $headerheight/2;
+
     #main-menu {
       top: 0;
       overflow: auto;
@@ -98,7 +112,7 @@ header#navigation {
     }
   }
 
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(sm){
 
     #main-menu{
       span.handle{
@@ -135,14 +149,14 @@ header#navigation {
           }
         }
         li{
-          &:hover > a, &:active > a, &.current-menu-item a, &.current-menu-parent a {
+          &:hover > a, &:active > a, &.current-menu-item > a, &.current-menu-parent > a {
             color: $color1;
           }
         }
         li.menu-item-has-children ul li{
           border:0;
           a{border:0;}
-          &:hover > a, &:active > a, &.current-menu-item a {
+          &:hover > a, &:active > a, &.current-menu-item > a {
             background: $color1;
             color:#fff;
           }
@@ -165,8 +179,8 @@ header#navigation {
 }
 
 .cart-contents{
-  margin-left: 5%;
-  min-width: 42px;
+  margin-left: 1vw;
+  position: relative;
 }
 .cart-contents:before {
   font-family:FontAwesome;
@@ -174,7 +188,7 @@ header#navigation {
   font-size:25px;
   font-style:normal;
   font-weight:400;
-  padding-right:5px;
+  padding-right:0px;
   vertical-align: bottom;
   color:#ccc;
   position: relative;
@@ -184,6 +198,9 @@ header#navigation {
   text-decoration: none;
 }
 .cart-contents-count {
+  position: absolute;
+  left: 100%;
+  top: 0;
   //position: relative;
   display: inline-block;
   color: #fff;
@@ -200,5 +217,4 @@ header#navigation {
   font-weight: 900;
   font-family: $font2;
   vertical-align: top;
-  position: relative;
 }

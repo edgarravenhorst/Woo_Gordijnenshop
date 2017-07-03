@@ -4,8 +4,8 @@ $registered-menus: (
         themes:(
             aside-left: (
                 min:0px,
-                max:map-get($grid-breakpoints, md),
-                autohide: map-get($grid-breakpoints, md)
+                max:map-get($grid-breakpoints, md)-1px,
+                autohide: map-get($grid-breakpoints, md)-1px
             ),
             plain-horizontal: (min:map-get($grid-breakpoints, md))
         )
@@ -30,5 +30,5 @@ $registered-menus: (
 
   #main-menu li ul li:hover ul:not(.active) li {
     max-height: 42px !important;
-  }  
+  }
 }

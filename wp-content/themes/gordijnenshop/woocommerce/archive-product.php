@@ -126,7 +126,7 @@ get_header( 'shop' ); ?>
       ?>
 
     </div>
-    <div class="col col-md-3">
+    <div class="col-sm-4 col-md-3">
       <?php dynamic_sidebar( 'cart-sidebar' ); ?>
       <?php //do_action( 'woocommerce_sidebar' ); ?>
     </div>

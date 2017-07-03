@@ -26,7 +26,7 @@ if ( $products->have_posts() ) :
   <section class="products">
     <div class="row">
       <?php while ( $products->have_posts() ) : $products->the_post(); ?>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2">
           <?php wc_get_template_part( 'content', 'product' ); ?>
         </div>
 

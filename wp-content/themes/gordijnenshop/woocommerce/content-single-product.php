@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 <div id="product-<?php the_ID(); ?>" <?php post_class(""); ?>>
 	<div id="main-description" class="row">
 
-		<div class="col-md-7"><?php
+		<div class="col-md-7"> <?php
 		woocommerce_template_single_excerpt();
 		woocommerce_template_single_meta();
 
